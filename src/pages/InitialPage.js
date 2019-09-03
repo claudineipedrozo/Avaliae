@@ -4,13 +4,14 @@ import { Text,
   StyleSheet, 
   TextInput, 
   TouchableOpacity,
-  Platform
+  Platform,
+  ActivityIndicator
 } from 'react-native';
-
 
 export default function App({ navigation }) {
   function handleList(){
     navigation.navigate('ListPage');
+  
   }
   return (
     <KeyboardAvoidingView
@@ -29,7 +30,7 @@ export default function App({ navigation }) {
       />
 
       <TouchableOpacity onPress={handleList} style={styles.button}>
-        <Text style={styles.buttonText}>Pesquisar</Text>
+        <Text style={styles.buttonText}>Pesquisar</Text>        
       </TouchableOpacity>
     </KeyboardAvoidingView>
   );
